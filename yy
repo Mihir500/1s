@@ -15,8 +15,56 @@ public class mihir {
 			
 
 		}
+alternative
+package sahil;
 
-junit:
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class abhijit {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:/Users/Sanket Naik/Desktop/seleniumtools/chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.jotform.com/build/232833384378061");
+		
+		driver.findElement(By.id("first_3")).sendKeys("John"); 
+	    driver.findElement(By.id("last_3")).sendKeys("Doe");
+	    
+	    // Email textbox
+	    driver.findElement(By.id("input_10")).sendKeys("john.doe@email.com");
+
+	    // Phone number textbox
+	    driver.findElement(By.id("input_11_full")).sendKeys("123-456-7890");
+
+	    // Dropdown 
+	  //  Select dropdown = new Select(driver.findElement(By.id("input_5")));
+	  //  dropdown.selectByVisibleText("I don't have");
+
+	 // Find radio button group 
+	 //   List<WebElement> radioButtons = driver.findElements(By.name("are you doumb"));
+
+	    // Select 2nd option 
+	 //.get(1).click();
+	    
+	    // Find submit button and click it
+	    WebElement submitBtn = driver.findElement(By.id("submit"));
+	    submitBtn.click();
+		
+		
+	}
+
+}
+
+junit:concat
 
 package pro;
 
@@ -39,6 +87,7 @@ public class additon {
 
 }
 
+
 tc:
 package pro;
 
@@ -56,6 +105,27 @@ class additonTest {
 	}
 
 }
+junit add
+public class AddNumbers {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class AddNumbersTest {
+    @Test
+    public void testAdd() {
+        int a = 3;
+        int b = 4;
+        int expectedSum = 7;
+        int actualSum = AddNumbers.add(a, b);
+        assertEquals(expectedSum, actualSum);
+    }
+}
+
 junit circle
 package selinium;
 
